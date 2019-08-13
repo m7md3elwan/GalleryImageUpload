@@ -32,7 +32,8 @@ protocol GalleryPresenterProtocol: class {
     var wireFrame: GalleryWireFrameProtocol? { get set }
     
     func viewLoaded()
-
+    func numberOfItems() -> Int
+    func itemAt(index: Int) -> GalleryImage
 }
 
 // MARK: Interactor -> Presenter

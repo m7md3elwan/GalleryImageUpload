@@ -27,6 +27,9 @@
 		3E1F953C2302500D00268396 /* GalleryApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F953B2302500D00268396 /* GalleryApiClientError.swift */; };
 		3E1F953F230251F500268396 /* Dictionary+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F953E230251F500268396 /* Dictionary+Merge.swift */; };
 		3E1F95412302537000268396 /* Error+code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F95402302537000268396 /* Error+code.swift */; };
+		3E1F954523026AEC00268396 /* GalleryImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F954323026AEC00268396 /* GalleryImageCollectionViewCell.swift */; };
+		3E1F954623026AEC00268396 /* GalleryImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E1F954423026AEC00268396 /* GalleryImageCollectionViewCell.xib */; };
+		3E1F954823026BFF00268396 /* GalleryImageUpload+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F954723026BFF00268396 /* GalleryImageUpload+Image.swift */; };
 		6252ACE5E6AE227839EB2E55 /* Pods_GalleryImageUploadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D343955E850B7DC298C2D79 /* Pods_GalleryImageUploadTests.framework */; };
 		F47FE9EAA4C18243CD6BFC62 /* Pods_GalleryImageUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A2DAD7302BE409680C882D /* Pods_GalleryImageUpload.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +73,10 @@
 		3E1F953B2302500D00268396 /* GalleryApiClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryApiClientError.swift; sourceTree = "<group>"; };
 		3E1F953E230251F500268396 /* Dictionary+Merge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Merge.swift"; sourceTree = "<group>"; };
 		3E1F95402302537000268396 /* Error+code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+code.swift"; sourceTree = "<group>"; };
+		3E1F954323026AEC00268396 /* GalleryImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E1F954423026AEC00268396 /* GalleryImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		3E1F954723026BFF00268396 /* GalleryImageUpload+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryImageUpload+Image.swift"; sourceTree = "<group>"; };
+		3E1F954923026EEB00268396 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		6D343955E850B7DC298C2D79 /* Pods_GalleryImageUploadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryImageUploadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8AAE22542B66AF674F8B7CF /* Pods-GalleryImageUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryImageUpload.release.xcconfig"; path = "Target Support Files/Pods-GalleryImageUpload/Pods-GalleryImageUpload.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +149,7 @@
 				3E1F94F023010CD700268396 /* Assets.xcassets */,
 				3E1F94F223010CD700268396 /* LaunchScreen.storyboard */,
 				3E1F94F523010CD700268396 /* Info.plist */,
+				3E1F954923026EEB00268396 /* Bridging-Header.h */,
 			);
 			path = "Support files";
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				3E1F95152301C03E00268396 /* Dispatch+helpers.swift */,
 				3E1F95312301CFE100268396 /* BaseViewController.swift */,
 				3E1F953323023F8600268396 /* PaginatedDataLoadState.swift */,
+				3E1F954723026BFF00268396 /* GalleryImageUpload+Image.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 		3E1F95222301C29A00268396 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3E1F9542230268AE00268396 /* cells */,
 				3E1F95232301C29A00268396 /* GalleryView.swift */,
 			);
 			path = View;
@@ -268,6 +278,15 @@
 				3E1F95402302537000268396 /* Error+code.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E1F9542230268AE00268396 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				3E1F954323026AEC00268396 /* GalleryImageCollectionViewCell.swift */,
+				3E1F954423026AEC00268396 /* GalleryImageCollectionViewCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		5E526D48D52D927424CFA860 /* Frameworks */ = {
@@ -375,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E1F94F423010CD700268396 /* LaunchScreen.storyboard in Resources */,
+				3E1F954623026AEC00268396 /* GalleryImageCollectionViewCell.xib in Resources */,
 				3E1F94F123010CD700268396 /* Assets.xcassets in Resources */,
 				3E1F94EF23010CD500268396 /* Main.storyboard in Resources */,
 			);
@@ -463,6 +483,7 @@
 				3E1F95322301CFE100268396 /* BaseViewController.swift in Sources */,
 				3E1F952E2301C29A00268396 /* GalleryProtocols.swift in Sources */,
 				3E1F952F2301C29A00268396 /* GalleryInteractor.swift in Sources */,
+				3E1F954823026BFF00268396 /* GalleryImageUpload+Image.swift in Sources */,
 				3E1F952A2301C29A00268396 /* GalleryRepository.swift in Sources */,
 				3E1F952C2301C29A00268396 /* GalleryWireFrame.swift in Sources */,
 				3E1F953423023F8600268396 /* PaginatedDataLoadState.swift in Sources */,
@@ -470,6 +491,7 @@
 				3E1F953C2302500D00268396 /* GalleryApiClientError.swift in Sources */,
 				3E1F952D2301C29A00268396 /* GalleryView.swift in Sources */,
 				3E1F95412302537000268396 /* Error+code.swift in Sources */,
+				3E1F954523026AEC00268396 /* GalleryImageCollectionViewCell.swift in Sources */,
 				3E1F95362302496900268396 /* GalleryImage.swift in Sources */,
 				3E1F95162301C03E00268396 /* Dispatch+helpers.swift in Sources */,
 				3E1F953A23024CE000268396 /* GalleryApiClient.swift in Sources */,
@@ -572,6 +594,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_PATH)GalleryImageUpload/Support files/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -627,6 +650,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_PATH)GalleryImageUpload/Support files/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;

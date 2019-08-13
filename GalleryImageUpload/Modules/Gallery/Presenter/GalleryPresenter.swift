@@ -38,6 +38,14 @@ extension GalleryPresenter: GalleryPresenterProtocol {
     func viewLoaded() {
         interactor?.loadImages()
     }
+    
+    func numberOfItems() -> Int {
+        return interactor?.gallaryLoadState.data.count ?? 0
+    }
+    
+    func itemAt(index: Int) -> GalleryImage {
+        return interactor!.gallaryLoadState.data[index]
+    }
 }
 
 // MARK:- GalleryInteractorOutputProtocol

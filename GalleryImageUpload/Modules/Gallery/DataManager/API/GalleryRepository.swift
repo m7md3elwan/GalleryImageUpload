@@ -20,7 +20,7 @@ class GalleryRepository: GalleryRepositoryProtocol {
     // MARK: Public Methods
     func getGalleryImages(nextCursor: String, success:@escaping (ImagesWrapper)-> Void, fail:@escaping(GalleryApiClientError?) -> Void) {
 
-        let params: [String: Any] = ["nextCursor": nextCursor]
+        let params: [String: Any] = ["next_cursor": nextCursor]
         let path = GalleryApiClient.Endpoints.getImages.rawValue
         
         apiService.execute(path: path, method: .get, parameters: params) { (wrapper: ImagesWrapper?, error) in
