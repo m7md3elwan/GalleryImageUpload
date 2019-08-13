@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - GeometricLoaders (1.1.1)
   - MEDataLoader (0.2.0)
   - SwiftMessages (5.0.0):
     - SwiftMessages/App (= 5.0.0)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GeometricLoaders
   - MEDataLoader
   - SwiftMessages (= 5.0.0)
   - UIScrollView-InfiniteScroll
@@ -15,16 +17,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - GeometricLoaders
     - MEDataLoader
     - SwiftMessages
     - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  GeometricLoaders: 4fbbeb569cf0ea647c620a9ffb87c9e63812e743
   MEDataLoader: 35c752215abab65b378e6649c53c9ce21e7eea67
   SwiftMessages: 342d312bf8d5ac11141285c8fec6308380df7f72
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: b2d61e62cbe0efd9a7f45e48ba6ac83cf6af310a
+PODFILE CHECKSUM: 02ce037b64f6c3dd926c082f747bb2a56b724015
 
 COCOAPODS: 1.7.5

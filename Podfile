@@ -9,6 +9,7 @@ target 'GalleryImageUpload' do
   pod 'Alamofire'
   pod 'SwiftMessages', '5.0.0'
   pod 'MEDataLoader'
+  pod 'GeometricLoaders'
 
   target 'GalleryImageUploadTests' do
     inherit! :search_paths
