@@ -11,7 +11,6 @@
 		3E1F94EF23010CD500268396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E1F94ED23010CD500268396 /* Main.storyboard */; };
 		3E1F94F123010CD700268396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E1F94F023010CD700268396 /* Assets.xcassets */; };
 		3E1F94F423010CD700268396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E1F94F223010CD700268396 /* LaunchScreen.storyboard */; };
-		3E1F94FF23010CD800268396 /* GalleryImageUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F94FE23010CD800268396 /* GalleryImageUploadTests.swift */; };
 		3E1F95162301C03E00268396 /* Dispatch+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F95152301C03E00268396 /* Dispatch+helpers.swift */; };
 		3E1F952A2301C29A00268396 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F951D2301C29A00268396 /* GalleryRepository.swift */; };
 		3E1F952B2301C29A00268396 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F951F2301C29A00268396 /* GalleryPresenter.swift */; };
@@ -30,6 +29,7 @@
 		3E1F954523026AEC00268396 /* GalleryImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F954323026AEC00268396 /* GalleryImageCollectionViewCell.swift */; };
 		3E1F954623026AEC00268396 /* GalleryImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E1F954423026AEC00268396 /* GalleryImageCollectionViewCell.xib */; };
 		3E1F954823026BFF00268396 /* GalleryImageUpload+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F954723026BFF00268396 /* GalleryImageUpload+Image.swift */; };
+		3E8B359F2302770800357E31 /* ImageAssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8B359E2302770800357E31 /* ImageAssetTests.swift */; };
 		6252ACE5E6AE227839EB2E55 /* Pods_GalleryImageUploadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D343955E850B7DC298C2D79 /* Pods_GalleryImageUploadTests.framework */; };
 		F47FE9EAA4C18243CD6BFC62 /* Pods_GalleryImageUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A2DAD7302BE409680C882D /* Pods_GalleryImageUpload.framework */; };
 /* End PBXBuildFile section */
@@ -56,8 +56,6 @@
 		3E1F94F323010CD700268396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E1F94F523010CD700268396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E1F94FA23010CD700268396 /* GalleryImageUploadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryImageUploadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E1F94FE23010CD800268396 /* GalleryImageUploadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageUploadTests.swift; sourceTree = "<group>"; };
-		3E1F950023010CD800268396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E1F95152301C03E00268396 /* Dispatch+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dispatch+helpers.swift"; sourceTree = "<group>"; };
 		3E1F951D2301C29A00268396 /* GalleryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
 		3E1F951F2301C29A00268396 /* GalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
@@ -77,6 +75,8 @@
 		3E1F954423026AEC00268396 /* GalleryImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		3E1F954723026BFF00268396 /* GalleryImageUpload+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryImageUpload+Image.swift"; sourceTree = "<group>"; };
 		3E1F954923026EEB00268396 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3E8B359E2302770800357E31 /* ImageAssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssetTests.swift; sourceTree = "<group>"; };
+		3EB189A523027615001C2324 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D343955E850B7DC298C2D79 /* Pods_GalleryImageUploadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryImageUploadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8AAE22542B66AF674F8B7CF /* Pods-GalleryImageUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryImageUpload.release.xcconfig"; path = "Target Support Files/Pods-GalleryImageUpload/Pods-GalleryImageUpload.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,8 +135,8 @@
 		3E1F94FD23010CD800268396 /* GalleryImageUploadTests */ = {
 			isa = PBXGroup;
 			children = (
-				3E1F94FE23010CD800268396 /* GalleryImageUploadTests.swift */,
-				3E1F950023010CD800268396 /* Info.plist */,
+				3EB189A423027615001C2324 /* Support Files */,
+				3E8B359E2302770800357E31 /* ImageAssetTests.swift */,
 			);
 			path = GalleryImageUploadTests;
 			sourceTree = "<group>";
@@ -289,6 +289,14 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		3EB189A423027615001C2324 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EB189A523027615001C2324 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		5E526D48D52D927424CFA860 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +347,7 @@
 				3E1F94F623010CD700268396 /* Sources */,
 				3E1F94F723010CD700268396 /* Frameworks */,
 				3E1F94F823010CD700268396 /* Resources */,
+				EF8C5A875886FBD48B019BCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,6 +374,7 @@
 					};
 					3E1F94F923010CD700268396 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 3E1F94E523010CD500268396;
 					};
 				};
@@ -471,6 +481,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EF8C5A875886FBD48B019BCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryImageUploadTests/Pods-GalleryImageUploadTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryImageUploadTests/Pods-GalleryImageUploadTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GalleryImageUploadTests/Pods-GalleryImageUploadTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -503,7 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E1F94FF23010CD800268396 /* GalleryImageUploadTests.swift in Sources */,
+				3E8B359F2302770800357E31 /* ImageAssetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,9 +728,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DRTN6B9Y6;
-				INFOPLIST_FILE = GalleryImageUploadTests/Info.plist;
+				INFOPLIST_FILE = "GalleryImageUploadTests/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,6 +739,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Elwan.GalleryImageUploadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GalleryImageUpload.app/GalleryImageUpload";
@@ -723,9 +752,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DRTN6B9Y6;
-				INFOPLIST_FILE = GalleryImageUploadTests/Info.plist;
+				INFOPLIST_FILE = "GalleryImageUploadTests/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
