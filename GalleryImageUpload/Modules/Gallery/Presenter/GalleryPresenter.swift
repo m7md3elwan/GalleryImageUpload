@@ -46,17 +46,22 @@ extension GalleryPresenter: GalleryPresenterProtocol {
     func itemAt(index: Int) -> GalleryImage {
         return interactor!.gallaryLoadState.data[index]
     }
+    
+    func userDidSelectImageToUpload(image: UIImage) {
+        view?.showLoader()
+        interactor?.uploadImage(image: image)
+    }
 }
 
 // MARK:- GalleryInteractorOutputProtocol
 extension GalleryPresenter: GalleryInteractorOutputProtocol {
     func errorOccured(error: GalleryApiClientError) {
+        view?.hideLoader()
         view?.showErrorMessage(text: error.errorDescription ?? "")
     }
     
     func galleryUpdated() {
         view?.reloadView()
-        //view?.setEmptyView(shown: interactor!.childPlansLoadState.isEmpty)
         setLoadState(isLoading: interactor!.gallaryLoadState.isLoading)
         galleryHasNextPage(nextPage: interactor!.gallaryLoadState.hasNextPage)
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PaginatedDataLoadState<T> {
+enum PaginatedDataLoadState<T: Equatable> {
     case notLoaded
     case loading
     case paging([T], nextCursor: String)
@@ -79,6 +79,20 @@ enum PaginatedDataLoadState<T> {
             return true
         case .notLoaded:
             return false
+        }
+    }
+    
+    mutating func addNewItem(item: T) {
+        guard !self.data.contains(item) else { return }
+        var newData = self.data
+        newData.insert(item, at: 0)
+        
+        switch self {
+        case .paging(_,let nextCursor):
+            self = .paging(newData , nextCursor: nextCursor)
+        case .populated(_):
+            self = .populated(newData + data)
+        default: break
         }
     }
 }

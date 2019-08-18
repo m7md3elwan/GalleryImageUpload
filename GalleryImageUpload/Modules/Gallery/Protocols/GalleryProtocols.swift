@@ -34,6 +34,8 @@ protocol GalleryPresenterProtocol: class {
     func viewLoaded()
     func numberOfItems() -> Int
     func itemAt(index: Int) -> GalleryImage
+    
+    func userDidSelectImageToUpload(image: UIImage)
 }
 
 // MARK: Interactor -> Presenter
@@ -52,6 +54,7 @@ protocol GalleryInteractorInputProtocol: class {
     
     func loadImages()
     func loadImagesNextPage()
+    func uploadImage(image: UIImage)
 }
 
 // MARK:- Wireframe Protocols
@@ -62,4 +65,5 @@ protocol GalleryWireFrameProtocol: class {
 // MARK:- Repository Protocols
 protocol GalleryRepositoryProtocol: class {
     func getGalleryImages(nextCursor: String, success:@escaping (ImagesWrapper)-> Void, fail:@escaping(GalleryApiClientError?) -> Void)
+    func uploadImage(base64Image: String, success:@escaping (GalleryImage)-> Void, fail:@escaping(GalleryApiClientError?) -> Void)
 }

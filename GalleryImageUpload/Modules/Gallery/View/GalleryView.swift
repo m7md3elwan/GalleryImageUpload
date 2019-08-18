@@ -19,6 +19,12 @@ class GalleryView: BaseViewController {
     
     // MARK:- Properties
     var presenter: GalleryPresenterProtocol?
+    lazy var imagePicker : UIImagePickerController = {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        return picker
+    }()
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(GalleryView.loadImages), for: .valueChanged)
@@ -27,12 +33,23 @@ class GalleryView: BaseViewController {
     
     // MARK: Outlets
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var addNewImageButton: UIBarButtonItem!
     
     // MARK:- UIViewController
     override func viewDidLoad() {
         registerCollectionViewCells()
         addRefreshControlToCollectionView()
         presenter?.viewLoaded()
+    }
+    
+    override func showLoader() {
+        super.showLoader()
+        addNewImageButton.isEnabled = false
+    }
+    
+    override func hideLoader() {
+        super.hideLoader()
+        addNewImageButton.isEnabled = true
     }
     
     // MARK:- Methods
@@ -51,6 +68,9 @@ class GalleryView: BaseViewController {
         presenter?.viewLoaded()
     }
     // MARK: Actions
+    @IBAction func addNewButtonClicked(_ sender: UIBarButtonItem) {
+        openImageOptionsPicker(sourceView: sender)
+    }
 }
 
 // MARK:- GalleryViewProtocol

@@ -19,6 +19,12 @@ class GalleryInteractor {
             presenter?.galleryUpdated()
         }
     }
+    
+    // MARK:- Method
+     func convertImageToBase64(image: UIImage) -> String {
+        let imageData = image.jpegData(compressionQuality: 0.5)!
+        return imageData.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 3))
+    }
 }
 
 // MARK:- GalleryInteractorInputProtocol
@@ -48,5 +54,18 @@ extension GalleryInteractor: GalleryInteractorInputProtocol {
                 self.presenter?.errorOccured(error: error)
             }
         })
+    }
+    
+    func uploadImage(image: UIImage) {
+        let base64Image = convertImageToBase64(image: image)
+        
+        repository?.uploadImage(base64Image: "data:image/jpg;base64,\(base64Image)", success: { (galleryImage) in
+            self.gallaryLoadState.addNewItem(item: galleryImage)
+        }, fail: { (error) in
+            if let error = error {
+                self.presenter?.errorOccured(error: error)
+            }
+        })
+        
     }
 }

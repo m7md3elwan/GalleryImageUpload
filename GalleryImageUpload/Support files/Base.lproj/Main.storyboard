@@ -52,7 +52,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7kt-k4-fKI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3g3-IJ-M17">
+                            <connections>
+                                <action selector="addNewButtonClicked:" destination="BYZ-38-t0r" id="HCZ-rG-iKO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="addNewImageButton" destination="3g3-IJ-M17" id="xHg-pI-LeV"/>
                         <outlet property="collectionView" destination="fDw-Gf-5iY" id="4gy-Np-ZYi"/>
                     </connections>
                 </viewController>

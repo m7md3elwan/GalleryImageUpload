@@ -31,4 +31,20 @@ class GalleryRepository: GalleryRepositoryProtocol {
             }
         }
     }
+    
+    func uploadImage(base64Image: String, success:@escaping (GalleryImage)-> Void, fail:@escaping(GalleryApiClientError?) -> Void) {
+        
+        let params: [String: Any] = ["file": base64Image,
+                                     "upload_preset": "elwanUnsigned"]
+        
+        let path = GalleryApiClient.Endpoints.uploadImage.rawValue
+        
+        apiService.execute(path: path, method: .post, parameters: params) { (image: GalleryImage?, error) in
+            if let image = image {
+                success(image)
+            } else {
+                fail(error)
+            }
+        }
+    }
 }

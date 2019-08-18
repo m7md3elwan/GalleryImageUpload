@@ -27,10 +27,12 @@ class GalleryApiClient: ApiExecutable {
     
     public enum Endpoints: String {
         case getImages = "resources/image"
+        case uploadImage = "image/upload"
     }
     
     public enum HTTPMethod: String {
-        case get = "GET" // Currently Api have only get requests
+        case get = "GET"
+        case post = "POST"
     }
     
     fileprivate func url(for endPoint: Endpoints) -> String {

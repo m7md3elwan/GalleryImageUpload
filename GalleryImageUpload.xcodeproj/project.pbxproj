@@ -30,6 +30,7 @@
 		3E1F954623026AEC00268396 /* GalleryImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E1F954423026AEC00268396 /* GalleryImageCollectionViewCell.xib */; };
 		3E1F954823026BFF00268396 /* GalleryImageUpload+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F954723026BFF00268396 /* GalleryImageUpload+Image.swift */; };
 		3E8B359F2302770800357E31 /* ImageAssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8B359E2302770800357E31 /* ImageAssetTests.swift */; };
+		3E8B35A223027C3000357E31 /* GalleryView+ImageSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8B35A123027C3000357E31 /* GalleryView+ImageSelect.swift */; };
 		6252ACE5E6AE227839EB2E55 /* Pods_GalleryImageUploadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D343955E850B7DC298C2D79 /* Pods_GalleryImageUploadTests.framework */; };
 		F47FE9EAA4C18243CD6BFC62 /* Pods_GalleryImageUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A2DAD7302BE409680C882D /* Pods_GalleryImageUpload.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		3E1F954723026BFF00268396 /* GalleryImageUpload+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryImageUpload+Image.swift"; sourceTree = "<group>"; };
 		3E1F954923026EEB00268396 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3E8B359E2302770800357E31 /* ImageAssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssetTests.swift; sourceTree = "<group>"; };
+		3E8B35A123027C3000357E31 /* GalleryView+ImageSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryView+ImageSelect.swift"; sourceTree = "<group>"; };
 		3EB189A523027615001C2324 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D343955E850B7DC298C2D79 /* Pods_GalleryImageUploadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryImageUploadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8AAE22542B66AF674F8B7CF /* Pods-GalleryImageUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryImageUpload.release.xcconfig"; path = "Target Support Files/Pods-GalleryImageUpload/Pods-GalleryImageUpload.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				3E1F9542230268AE00268396 /* cells */,
 				3E1F95232301C29A00268396 /* GalleryView.swift */,
+				3E8B35A123027C3000357E31 /* GalleryView+ImageSelect.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				3E1F95362302496900268396 /* GalleryImage.swift in Sources */,
 				3E1F95162301C03E00268396 /* Dispatch+helpers.swift in Sources */,
 				3E1F953A23024CE000268396 /* GalleryApiClient.swift in Sources */,
+				3E8B35A223027C3000357E31 /* GalleryView+ImageSelect.swift in Sources */,
 				3E1F953823024A1100268396 /* ImagesWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
