@@ -4,6 +4,7 @@ platform :ios, '11.0'
 def testingPods
   pod 'Quick'
   pod 'Nimble'
+  pod 'Mockit'
 end
 
 target 'GalleryImageUpload' do

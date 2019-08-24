@@ -16,4 +16,9 @@ class ImagesWrapper: Codable {
         case images = "resources"
         case nextCursor = "next_cursor"
     }
+    
+    init(images: [GalleryImage], nextCursor: String?) {
+        self.images = images
+        self.nextCursor = nextCursor
+    }
 }

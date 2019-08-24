@@ -29,6 +29,13 @@ class GalleryImage: Codable {
         width = try container.decodeIfPresent(Int.self, forKey: .width)
         height = try container.decodeIfPresent(Int.self, forKey: .height)
     }
+    
+    init(id: String, url: String, width: Int? = nil, height: Int? = nil) {
+        self.id = id
+        self.url = url
+        self.width = width
+        self.height = height
+    }
 }
 
 extension GalleryImage: Equatable {
