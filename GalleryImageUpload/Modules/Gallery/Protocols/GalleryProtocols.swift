@@ -36,6 +36,7 @@ protocol GalleryPresenterProtocol: class {
     func itemAt(index: Int) -> GalleryImage
     
     func userDidSelectImageToUpload(image: UIImage)
+    func usedDidSelectItem(index: Int)
 }
 
 // MARK: Interactor -> Presenter
@@ -59,7 +60,9 @@ protocol GalleryInteractorInputProtocol: class {
 
 // MARK:- Wireframe Protocols
 protocol GalleryWireFrameProtocol: class {
+    var view: UIViewController? { get set }
     static func createGalleryView() -> GalleryView
+    func openImageDetailedView(url: URL)
 }
 
 // MARK:- Repository Protocols

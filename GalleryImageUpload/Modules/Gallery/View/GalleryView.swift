@@ -127,6 +127,8 @@ extension GalleryView : UICollectionViewDelegate , UICollectionViewDataSource , 
         return CGSize(width: iPhoneCellWidth, height: iPhoneCellHeight)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.usedDidSelectItem(index: indexPath.item)
     }
     
 }

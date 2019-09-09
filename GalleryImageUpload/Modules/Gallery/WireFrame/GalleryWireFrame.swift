@@ -17,6 +17,8 @@ class GalleryWireFrame: GalleryWireFrameProtocol {
         static let viewIdentifier: String = "GalleryView"
     }
     
+    weak var view: UIViewController?
+    
     // MARK:- Methods
     // MARK:- Public Methods
     static func createGalleryView() -> GalleryView {
@@ -30,6 +32,7 @@ class GalleryWireFrame: GalleryWireFrameProtocol {
         // Connecting
         view.presenter = presenter
         presenter.view = view
+        wireFrame.view = view
         presenter.wireFrame = wireFrame
         presenter.interactor = interactor
         interactor.presenter = presenter
@@ -40,5 +43,10 @@ class GalleryWireFrame: GalleryWireFrameProtocol {
     
     static var storyBoard: UIStoryboard {
         return UIStoryboard(name: Constants.storyBoardName, bundle: nil)
+    }
+    
+    func openImageDetailedView(url: URL) {
+        let galleryDetailedView = GalleryDetailedWireFrame.createGalleryDetailedView(selectedImageUrl: url)
+        view?.present(galleryDetailedView, animated: true, completion: nil)
     }
 }
