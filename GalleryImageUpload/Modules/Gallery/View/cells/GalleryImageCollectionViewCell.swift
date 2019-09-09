@@ -25,15 +25,13 @@ class GalleryImageCollectionViewCell: UICollectionViewCell {
     func setGalleryImage(image: GalleryImage) {
         mainImageView.image = UIImage(asset: .imagePlaceholder)
         
-        if let imageUrl = URL(string: image.url ?? "") {
-            imageFetcher?.getImage(with: imageUrl, completion: {[weak self, url = image.url] (galleryImage) in
-                if url == self?.image.url {
-                    Dispatch.onMainThread {
-                        self?.mainImageView.image = galleryImage ?? UIImage(asset: .errorImage)
-                    }
+        imageFetcher?.getImage(with: image.url!, completion: {[weak self, url = image.url] (galleryImage) in
+            if url == self?.image.url {
+                Dispatch.onMainThread {
+                    self?.mainImageView.image = galleryImage ?? UIImage(asset: .errorImage)
                 }
-            })
-        }
+            }
+        })
     }
     
 }

@@ -12,6 +12,15 @@ class ImagesWrapper: Codable {
     var images = [GalleryImage]()
     let nextCursor: String?
     
+    var validImages: [GalleryImage] {
+        return images.compactMap { (image) -> GalleryImage? in
+            if image.url != nil {
+                return image
+            }
+            return nil
+        }
+    }
+    
     enum CodingKeys: String, CodingKey {
         case images = "resources"
         case nextCursor = "next_cursor"

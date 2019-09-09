@@ -8,9 +8,13 @@
 
 import Foundation
 
+enum CodableError: Error {
+    case urlNotExist
+}
+
 class GalleryImage: Codable {
     let id: String
-    let url: String
+    let url: URL?
     let width: Int?
     let height: Int?
     
@@ -24,15 +28,21 @@ class GalleryImage: Codable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
-        url = try container.decode(String.self, forKey: .url)
+        
+        let stringURL = try container.decode(String.self, forKey: .url)
+        self.url = URL(string: stringURL)
         
         width = try container.decodeIfPresent(Int.self, forKey: .width)
         height = try container.decodeIfPresent(Int.self, forKey: .height)
     }
     
-    init(id: String, url: String, width: Int? = nil, height: Int? = nil) {
+    init?(id: String, url: String, width: Int? = nil, height: Int? = nil) {
         self.id = id
-        self.url = url
+        if let url = URL(string: url) {
+            self.url = url
+        } else {
+            return nil
+        }
         self.width = width
         self.height = height
     }
