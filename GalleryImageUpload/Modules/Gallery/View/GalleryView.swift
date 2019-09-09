@@ -15,6 +15,10 @@ class GalleryView: BaseViewController {
     struct Constants {
         static let imageCellName = "GalleryImageCollectionViewCell"
         static let iPadCellSize: CGFloat = 320
+        static let cellSpacing: CGFloat = 1
+        static let numberOfCellsPerRow: CGFloat = 3
+        static let iPhoneHeightToWidthRatio: CGFloat = 2
+
     }
     
     // MARK:- Properties
@@ -30,6 +34,15 @@ class GalleryView: BaseViewController {
         refreshControl.addTarget(self, action: #selector(GalleryView.loadImages), for: .valueChanged)
         return refreshControl
     } ()
+    
+    
+    var iPhoneCellWidth: CGFloat {
+        return (self.view.frame.width / Constants.numberOfCellsPerRow) - (Constants.numberOfCellsPerRow * Constants.cellSpacing)
+    }
+    
+    var iPhoneCellHeight: CGFloat {
+        return iPhoneCellWidth * Constants.iPhoneHeightToWidthRatio
+    }
     
     // MARK: Outlets
     @IBOutlet var collectionView: UICollectionView!
@@ -111,7 +124,9 @@ extension GalleryView : UICollectionViewDelegate , UICollectionViewDataSource , 
         if UIDevice.current.userInterfaceIdiom == .pad {
             return CGSize(width: Constants.iPadCellSize, height: Constants.iPadCellSize)
         }
-        return CGSize(width: self.view.frame.width, height: self.view.frame.width)
+        return CGSize(width: iPhoneCellWidth, height: iPhoneCellHeight)
+    }
+    
     }
     
 }
