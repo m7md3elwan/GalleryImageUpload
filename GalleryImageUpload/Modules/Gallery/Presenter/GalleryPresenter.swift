@@ -51,6 +51,10 @@ extension GalleryPresenter: GalleryPresenterProtocol {
         view?.showLoader()
         interactor?.uploadImage(image: image)
     }
+    
+    func usedDidSelectItem(index: Int) {
+        wireFrame?.openImageDetailedView(url: interactor!.gallaryLoadState.data[index].url!)
+    }
 }
 
 // MARK:- GalleryInteractorOutputProtocol

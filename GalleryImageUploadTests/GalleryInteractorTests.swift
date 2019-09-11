@@ -20,11 +20,11 @@ class GalleryInteractorTests: QuickSpec {
         var repository: GalleryRepositoryMock!
         
         // MARK:- Text data
-        let image1 = GalleryImage(id: "id1", url: "http://testUrl1")
-        let image2 = GalleryImage(id: "id2", url: "http://testUrl2")
-        let image3 = GalleryImage(id: "id3", url: "http://testUrl3")
-        let image4 = GalleryImage(id: "id4", url: "http://testUrl4")
-        let image5 = GalleryImage(id: "id5", url: "http://testUrl5")
+        let image1 = GalleryImage(id: "id1", url: "http://testUrl1")!
+        let image2 = GalleryImage(id: "id2", url: "http://testUrl2")!
+        let image3 = GalleryImage(id: "id3", url: "http://testUrl3")!
+        let image4 = GalleryImage(id: "id4", url: "http://testUrl4")!
+        let image5 = GalleryImage(id: "id5", url: "http://testUrl5")!
         
         let successDummyCompletionHandler: (ImagesWrapper) -> Void = { (wrapper) -> Void in }
         let failDummyCompletionHandler: (GalleryApiClientError?) -> Void = { (error) -> Void in }
